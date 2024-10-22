@@ -3,6 +3,7 @@ import './App.css'
 import Parent from './assets/components/Parent'
 import Parent1 from './assets/components/Parent1'
 import MyApp from './assets/components/Test'
+import UseEffect from './assets/components/UseEffect'
 
 function App() {
   const [count, setCount] = useState(10)
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+    <UseEffect count={count}/>
      {/* <Parent1/> */}
      {/* <MyApp/> */}
      <div style={{background:color,width:"160px",padding:"10px"}}>

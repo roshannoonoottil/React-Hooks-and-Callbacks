@@ -6,11 +6,12 @@ function UseEffect(props) {
     const [boom, setBoom] = useState(false)
     useEffect(()=>{
         setBoom(false)
-        setTimeout(()=>{
+        const id = setTimeout(()=>{
             setBoom(true)
         },props.count * 1000)
         console.log("useEffect Hook is called "+props.count);
         return()=>{
+            clearTimeout(id)
             console.log("useEffect Hook is cleaned up "+ props.count);
         }
     },[props.count])
